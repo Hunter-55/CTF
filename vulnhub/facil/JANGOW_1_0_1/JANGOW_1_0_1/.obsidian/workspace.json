@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "40a3fd739a01cf6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4319ffe8eb47c723",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd4e5db11907f26a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1f9ebd7a6b443069",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ce8273feabfc6a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "704b57ad6e3282e3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6c03dbaf793a5b43",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2ecc53f03203ffad",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "0981524eef32747a",
+    "type": "split",
+    "children": [
+      {
+        "id": "acc0ce136e84b1d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08b7e18e133c79d1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd5ab61eb0b6c38f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a8c4210ab9f7f4dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "db47a22748d8f11e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fd4e5db11907f26a",
+  "lastOpenFiles": [
+    "Reto.md",
+    "RESOLUCIÓN DEL RETO.md",
+    "imagenes/filezilla.png",
+    "imagenes/flagUSER.png",
+    "imagenes/credenciales_backup.png",
+    "imagenes/dirsearch.png",
+    "imagenes/link_buscar.png",
+    "imagenes/paguina_inicio.png",
+    "imagenes/sitefolder.png",
+    "imagenes/nmap.png",
+    "imagenes",
+    "Welcome.md"
+  ]
+}
