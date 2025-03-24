@@ -7,7 +7,7 @@ Utilizando " netdiscover " procedemos a encontrar los equipos conectados en la r
 ```
 sudo netdiscover -r 192.168.0.0/24
 ```
-![[/imagenes/ip_victima.png]]
+![[ip_victima.png]]
 
 Una ves encontrada la IP de la maquina victima comenzamos a realizar un escaneo de puertos, utilizaremos " nmap ":
 ```
