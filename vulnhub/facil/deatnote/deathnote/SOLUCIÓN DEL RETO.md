@@ -7,13 +7,13 @@ Utilizando " netdiscover " procedemos a encontrar los equipos conectados en la r
 ```
 sudo netdiscover -r 192.168.0.0/24
 ```
-![[ip_victima.png]]
+![IP Victima](imagenes/ip_victima.png)
 
 Una ves encontrada la IP de la maquina victima comenzamos a realizar un escaneo de puertos, utilizaremos " nmap ":
 ```
 sudo nmap -sV -A -T5 192.168.0.101
 ```
-![[escaneo_nmap.png.png]]
+![Escaneo Nmap](imagenes/escaneo_nmap.png)
 
 Encontramos 2 puertos abiertos:
 - El puerto 22 que corresponde al ssh con una versiuon "OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)" .
@@ -24,14 +24,14 @@ Revisamos la paguina web, ya que nos marca que tiene activo un servicio web y no
 ```
 	sudo nano /etc/hosts/
 ```
-![[hosts.png]]
+![Hosts](imagenes/hosts.png)
 
 Volvemos a revisar la paguina y nos muestra un fondo del tema del famoso anime llamado "death note".
 Revisamos el codigo de la paguina y nada inusual, pero al entrar al botón de "HINT" nos muestra un mensaje que nos da una pista:
-![[mensaje_web.png]]
+![Mensaje Web](imagenes/mensaje_web.png)
 
 Buscando algun comentario vi una linea que llamo mi atención en la paguina que dice "my fav line is iamjustic3". 
-![[linea_fav.png]]
+![Linea Fav](imagenes/linea_fav.png)
 
 Si conoces la serie o si análisas bien la paguina te daras cuenta que kira es el pricipal por lo que si realizas una enumeración de directorios sia dirb, dirsearch o wpscan, podras ver los directorios del servidor.
 ```
@@ -42,29 +42,29 @@ Como sabemos el servidor web utiliza wordpress por lo que entrando a "http://dea
 y la contraseña se encuentra en la nota que encontramos en la paguina:
 - USERNAME: kira
 - PASSWORK: iamjustic3
-![[credenciales_login.png]]
+![Credenciales Login](imagenes/credenciales_login.png)
 
 Nos mostrara el panel de wordpress:
-![[wordpress_admin.png]]
+![Wordpress Admin](imagenes/wordpress_admin.png)
 
 Revisando en el apartado de media encontramos la nota que nos mencionaban al principio "note.txt".
-![[note.png]]
+![Note](imagenes/note.png)
 
 Vemos el contenido de "note.txt".
-![[note_conte.png]]
+![Note Contenido](imagenes/note_conte.png)
 
 Revisando la url "http://deathnote.vuln/wordpress/wp-content/uploads/2021/07/notes.txt"
 podemos revisar los archivos contenidos en directorio "/07" y encontramos "http://deathnote.vuln/wordpress/wp-content/uploads/2021/07/user.txt" este archivo "user.txt".
-![[user_conte.png]]
+![User Contenido](imagenes/user_conte.png)
 
 Revisamos si encontramos algo en "http://deathnote.vuln/robots.txt" y encontramos una nota.
-![[robots_txt.png]]
+![Robots Txt](imagenes/robots_txt.png)
 
 En la nota menciona un archivo "important.jpg" en cual al realizarle un curl nos muestra lo siguiente.
 ```
 curl http://deathnote.vuln/important.jpg
 ```
-![[curl_result.png]]
+![Curl Result](imagenes/curl_result.png)
 
 Eso nos indica que para obtener acceso por ssh debemos encontrar el usuario y contraseña.
 podemos utilizar hydra para poder conectarnos. 
@@ -80,12 +80,12 @@ wget http://deathnote.vuln/wordpress/wp-content/uploads/2021/07/user.txt
 ```
 hydra -L user.txt -P notes.txt ssh://192.168.0.101
 ```
-![[coneccion_ssh.png]]
+![Conección SSH](imagenes/coneccion_ssh.png)
 
 La contraseña del ssh son.
 - login: l   
 - password: death4me
-![[ssh_login.png]]
+![SSH Login](imagenes/ssh_login.png)
 
 Buscamos en la siguiente ruta "/opt/L/fake-notebook-rule" y encontramos dos archivos:
 - case.wav
@@ -93,11 +93,11 @@ Buscamos en la siguiente ruta "/opt/L/fake-notebook-rule" y encontramos dos arch
 ```
 use cyberchef
 ```
-![[ssh_1.png]]
-![[cyberchef.png]]
+![SSH 1](imagenes/ssh_1.png)
+![Cyberchef](imagenes/cyberchef.png)
 
 Utilizaremos la herramienta de cyberchef y decodificamos: 63 47 46 7a 63 33 64 6b 49 44 6f 67 61 32 6c 79 59 57 6c 7a 5a 58 5a 70 62 43 41 3d.
-![[hex_string.png]]
+![Hex String](imagenes/hex_string.png)
 
 El resultado es: passwd : kiraisevil 
 
@@ -112,7 +112,7 @@ Al abrir el archivi kira.txt vemos:
 cat kira.txt
 ```
 cGxlYXNlIHByb3RlY3Qgb25lIG9mIHRoZSBmb2xsb3dpbmcgCjEuIEwgKC9vcHQpCjIuIE1pc2EgKC92YXIp
-![[kita_txt.png]]
+![Kira Txt](imagenes/kita_txt.png)
 
 Nos encontrmos con este resultado:
 - please protect one of the following 
@@ -128,4 +128,4 @@ Utilizando https://www.dcode.fr/brainfuck-language decodificamos el mensaje que 
 "i think u got the shell , but you wont be able to kill me -kira".
 
 Al logearse como root buscamos la carpeta root y encontramos la flag.
-![[root_.flag.png]]
+![Root Flag](imagenes/root_.flag.png)
