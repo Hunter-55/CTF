@@ -23,7 +23,7 @@ Identificamos 3 puertos expuesto:
 No indica que los puertos abiertos es 21 que corre un servicio de ftp, 22 que corre un servicio ssh y el 80 que corre un sevico web http, por lo que procedemos a revisar la paguina web si es que contiene un sitio por el puerto 80.
 
 Esto es lo que se visualiza en la paguina web:
-![[web1.png]]
+![root](img/web1.png)
 
 Tenemos un texto que indica que ya ha sido hackeado pero lo interesante es que nos muestra dos nombres de usuarios que nos puede ayudar mas adelante:
 - travisscott
@@ -42,16 +42,16 @@ Dandonos un resultado de **index.php , robots.txt, server-status**, el server-st
 ```
 
 Accesediendo al http://192.168.0.27/server-status me muestra que no tengo permisos:
-![[serverStattus.png]]
+![root](img/serverStattus.png)
 
 Accesediendo al http://192.168.0.27/robots.txt me muestra unas rutas que debemos revisar /dripisreal.txt y /etc/dripispowerful.html:
-![[robot.png]]
+![root](img/robot.png)
 
 Al entrar a la ruta http://192.168.0.27/dripisreal.txt tenemos este mensaje:
-![[message.png]]
+![root](img/message.png)
 
 Como el mensaje indica que hay que contar las palabras y juntarlas para hacer un md5 para obtener la contraseña, en el intento no pudimos resolver la contraseña y esto fue lo que nos mostro la paguina que nos indica:
-![[cancion .png]]
+![root](img/cancion .png)
 
 Por lo que porcedemos a interntar algo más, como intentar entrar al ftp como anonymous:
 ```
@@ -103,7 +103,7 @@ just focus on "drip"
 Identificamos que drip tiene algo que ver por la información de concentrarnos en drip, aunque podria ser una distracción pero recordando que en la enumeración de directorios obtuvimos un index.php podemos intuir que "drip" puede agregarse como query en la url: 
 - http://192.168.0.27/index.php?drip=/etc/dripispowerful.html
 Mostrandonos esta paguina:
-![[drip.png]]
+![root](img/drip.png)
 
 Donde nos da este mensaje con una contraseña:
 - password is: imdrippinbiatch driftingblues is hacked again so it's now called drippingblues. :D hahaha  by  travisscott & thugger
@@ -230,7 +230,7 @@ Y ejecutamos el script:
 ```
 python3 CVE-2021-3560.py
 ```
-![[root.png]]
+![root](img/root.png)
 
 Vemos que funciono:
 ```
