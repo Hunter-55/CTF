@@ -14,6 +14,9 @@ sudo nmap -sV -A -T5 192.168.1.30
 ```
 ![[nmap.png]]
 
+![Texto alternativo](imagenes/nmap.png)
+
+
 Encontramos que tenemos los puertos:
 - 22 corriendo un servicio " ssh "
 - 80 corriendo un servicio " web - apache "
