@@ -21,7 +21,7 @@ Descubrimos 2 puertos abiertos el 22 y 80 el cual nos indica que el puerto 22 es
 
 Revisamos si contiene alguna paguina web y solo nos muestra el banner de apache:
 - http://192.168.0.40/
-- ![web1](imagenes/web1.png)
+- ![web1](img/web1.png)
 
 Vamos a realizar una enumeraciòn de directorio usando "dirb" o "dirsearch" para descubrir directores del servicio, con "dirsearch" descubrimos un archivio "robots.txt" y un directorio "secret":
 - http://192.168.0.40/robots.txt
@@ -31,9 +31,9 @@ sudo dirsearch -u http://192.168.0.40/
 ```
 
 Revisando la url apuntando a robots.txt nos muestra una paguina con un mensaje " Hello H4x0r ", revisamos còdigo fuente y no se encontro nada màs:
-- ![robots](imagenes/robots.png)
+- ![robots](img/robots.png)
 Y revisando el directorio "secret" no encontramos nada:
-- ![secret](imagenes/secret.png)
+- ![secret](img/secret.png)
 
 Recordando que con "dirsearch" nos mostraba un cambio de directorio en secret
 - [10:40:36] 301 -  313B  - /secret  ->  http://192.168.0.40/secret/
@@ -58,14 +58,14 @@ Nos muestra que la palabra es "command"
 
 Nos muestra la informacion de usuarios que aparecen en "/etc/passwd"
 - mowree:x:1000:1000:mowree,,,:/home/mowree:/bin/bash
-- ![passwd](imagenes/passwd.png)
+- ![passwd](img/passwd.png)
 
 Tenemos el nombre del usuario "mowree" el cual nos indica una ruta "/home/mowree/bin/bash", podemos intentar acceder por ssh pero no contamos con una contraseña, se intento de utilizar "H4x0r", "mowree", "evil", "evilboxone" como contraseña pero no funcionò.
 
 Por lo que tenemos una ruta y buscaremos si cuenta con una llave RSA para conectarse por ssh, por default la ruta de las llaves RSA "/home/nombreUsuario/.ssh/id_rsa" y cuando lo agregamos en nuestra busqueda obtenemos la llave:
 - http://192.168.0.40/secret/evil.php?command=/home/mowree/.ssh/id_rsa
 - [[LLAVE - RSA]]
-- ![rsa](imagenes/rsa.png)
+- ![rsa](img/rsa.png)
 
 Guardamos en un archivo llamado "id_rsa" y damos permisos:
 ```
@@ -110,7 +110,7 @@ sudo ssh -i id_rsa mowree@192.168.0.40
 ```
 
 Y entramos al SSH:
-- ![inputSSH](imagenes/inputSSH.png)
+- ![inputSSH](img/inputSSH.png)
 
 Entrando como el usuario "mowree" listamos con el comando:
 ```
@@ -122,7 +122,7 @@ cat user.txt
 ```
 Contenido de la flag del usuario:
 - 56Rbp0soobpzWSVzKh9YOvzGLgtPZQ
-- ![flaguser](imagenes/flaguser.png)
+- ![flaguser](img/flaguser.png)
 
 Es hora de elevar privilegios y obtener la flag del usuario root
 Usamos "linpeas" es una herramienta de auditoria automatizada que permite recopilar informaciòn de posibles vectores de ataque: https://github.com/peass-ng/PEASS-ng/releases esta basado de bash "./linpeas.sh"
