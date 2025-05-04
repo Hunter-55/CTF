@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "e5fb11c593ff7544",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca7ad8e545f6102e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a6743eb10638f3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RESOLUCIÓN DEL RETO"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1d192185b55f302d",
+    "type": "split",
+    "children": [
+      {
+        "id": "1fd4ffd1bc3f20cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c0c20c6a17769d2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "adec1bee82394bb6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "2e228fc920f07b90",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 214.5
+  },
+  "right": {
+    "id": "32447fbc75a12ebd",
+    "type": "split",
+    "children": [
+      {
+        "id": "7df75d241bee1c47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93b795542cb1548a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for RESOLUCIÓN DEL RETO"
+            }
+          },
+          {
+            "id": "bf9666fd3e6a0225",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from RESOLUCIÓN DEL RETO"
+            }
+          },
+          {
+            "id": "10f0566d58918cb1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4798ec4174d5eca6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "RESOLUCIÓN DEL RETO.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of RESOLUCIÓN DEL RETO"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "6a6743eb10638f3a",
+  "lastOpenFiles": [
+    "img/flag.png",
+    "img/sploit_7.png",
+    "img/sploit_6.png",
+    "img/sploit_5.png",
+    "img/sploit_4.png",
+    "img/sploit_3.png",
+    "RESOLUCIÓN DEL RETO.md",
+    "img/sploit_2.png",
+    "img/sploit_1.png",
+    "img/web_3.png",
+    "img/web_2.png",
+    "Reto.md",
+    "img"
+  ]
+}
