@@ -1,28 +1,14 @@
 {
   "main": {
-    "id": "e7e0bc11a6cc73da",
+    "id": "df28b1a8aa352fbe",
     "type": "split",
     "children": [
       {
-        "id": "5fc48a7ac9280152",
+        "id": "2459ca8cc3d8d12f",
         "type": "tabs",
         "children": [
           {
-            "id": "3d46ef122b403991",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RETO.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RETO"
-            }
-          },
-          {
-            "id": "9c0c089936fabb04",
+            "id": "4ae070b8561fc400",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,22 +21,21 @@
               "title": "SOLUCIÓN DEL RETO"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "03c884c8bd594337",
+    "id": "bd15abbe59b863d4",
     "type": "split",
     "children": [
       {
-        "id": "e6597dde0fe0a58f",
+        "id": "0773bfb22efd1309",
         "type": "tabs",
         "children": [
           {
-            "id": "33ba0c282582dce8",
+            "id": "82166b8cd696fa36",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,7 +48,7 @@
             }
           },
           {
-            "id": "b5d094047be8fd88",
+            "id": "c0d5e3fe066a6354",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -80,7 +65,7 @@
             }
           },
           {
-            "id": "a9f9e5e3c03411f5",
+            "id": "e19c929be63eee94",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -93,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 238.5
   },
   "right": {
-    "id": "70e6f758f32adc2d",
+    "id": "eee43a97df110dbb",
     "type": "split",
     "children": [
       {
-        "id": "f8366c8c19c87a49",
+        "id": "e537d82ee80d61b2",
         "type": "tabs",
         "children": [
           {
-            "id": "034bb2cab967419f",
+            "id": "e59c7523341c2b62",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RETO.md",
+                "file": "SOLUCIÓN DEL RETO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for RETO"
+              "title": "Backlinks for SOLUCIÓN DEL RETO"
             }
           },
           {
-            "id": "058a9eb13dff1b73",
+            "id": "c0851d08daab325d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RETO.md",
+                "file": "SOLUCIÓN DEL RETO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from RETO"
+              "title": "Outgoing links from SOLUCIÓN DEL RETO"
             }
           },
           {
-            "id": "274c4c9f067abe0b",
+            "id": "af85ddb233a7a03c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -152,18 +137,32 @@
             }
           },
           {
-            "id": "956fbb5346d05243",
+            "id": "69ddb2470a768173",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "20ce1c1e076af525",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "RETO.md",
+                "file": "SOLUCIÓN DEL RETO.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RETO"
+              "title": "Outline of SOLUCIÓN DEL RETO"
             }
           }
         ]
@@ -175,29 +174,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "9c0c089936fabb04",
+  "active": "4ae070b8561fc400",
   "lastOpenFiles": [
     "RETO.md",
     "SOLUCIÓN DEL RETO.md",
-    "imagenes/flag.png",
-    "imagenes/root.png",
-    "imagenes/files.png",
-    "imagenes/ssh.png",
-    "imagenes/nota.png",
-    "imagenes/dirsearch.png",
-    "imagenes/codigo_web.png",
-    "imagenes/paguina_web.png",
-    "imagenes/nmap.png",
-    "imagenes",
-    "Welcome.md"
+    "img/user_pass.png",
+    "img/templates.png",
+    "img/wordpress_login.png",
+    "img/robots.png",
+    "img/web.png",
+    "img"
   ]
 }
