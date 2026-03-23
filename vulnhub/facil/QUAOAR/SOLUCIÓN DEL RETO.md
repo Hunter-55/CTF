@@ -44,7 +44,7 @@ Enconramos los siguientes púertos con los servicios expuestos:
 		- 995/tcp open  ssl/pop3 Dovecot pop3d
 
 Entramos a la werb para ver que contiene: http://192.168.1.82/
-- ![[web.png]]
+- ![web](img/web.png)
 Pero no encontramos nada en el código por lo que se realiza una enumeración de directorios:
 ```
 sudo dirsearch -u http://192.168.1.82/ 
@@ -56,11 +56,11 @@ sudo wpscan --enumerate u,ap  --url http://192.168.1.82/wordpress/
 ```
 
 Al entrar al plugin de wordpress http://192.168.1.82/wordpress/wp-login.php podemos ingresar con las credenciales user:admin, password:admin:
-- ![[wordpress_login.png]]
+- ![wordpress_login](img/wordpress_login.png)
 
 Como ya pudimos acceder al wordpress y verificamos que somos administradores ahora verificamos plugins oi temas que existan instalados en el sistema.
 En apariencia y tomando el tema "twentyfourteen" editamos uno de los archivos que conytiene en la parte de templates en este caso el archivo 404.php:
-- ![[templates.png]]
+- ![templates](img/templates.png)
 - donde le insertamos o modificamos el código php para generar un reverseshell:
 	- https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 - tema:
@@ -102,7 +102,7 @@ cat /var/www/wordpress/wp-config.php
 Vemos un user y password:
 - user: root
 - password: rootpassword!
-![[user_pass.png]]
+![user_pass](img/user_pass.png)
 
 Iniciamos la sesión:
 ```
