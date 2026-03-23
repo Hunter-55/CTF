@@ -14,7 +14,7 @@ sudo nmap -sV -sC 192.168.1.17
 ```
 
 Despues del escaneo con nmap obtenemos 2 servicios, un ssh por el puerto 22 y el http por el pueto 80.
-![[nmap.png]]
+![nmap](img/nmap.png)
 
 En el escaneo nos muestra información sobre el repositoriuo del git, esto es un punto muy importante ya que tenemos un repositorio expuesto y con esto podemos ver el proyecto completo y el historial de cambios:
 ```
@@ -26,7 +26,7 @@ http-git:
 ```
 
 Revisando para ver si tiene una paguina web levantada vemos lo siguiente:
-![[web.png]]
+![web](img/web.png)
 
 Aunque revisando el código de la paguina no encontramos nada, procedemos hacer una enumeración de directorios:
 ```
@@ -34,7 +34,7 @@ sudo dirsearch -u http://192.168.1.17/
 ```
 
 Encontramos directorios activos pero confirmamos que tiene expuesto el repositorio por lo que podriamos clonar el proyecto.
-![[dirsearch.png]]
+![dirsearch](img/dirsearch.png)
 
 Vamos a clonar el repositorio, pero antes vamos a instalar la herramienta "GitTools":
 ```
@@ -52,7 +52,7 @@ extractor ./repo ./recovered
 ```
 
 Esto nos recostruye un árbol de carpetas ya que no nos reconstruye el repositorio completo tal ves por que este dañado, pero nos trae los commits individuales:
-![[commits.png]]
+![commits](img/commits.png)
 
 Dentro de la carpeta "recovered" se encuentra 3 carpetas que representa el hash del commit en este caso temos 3 y vamos a ir revisando cada carpeta pera ver cambios realizados en el proyecto:
 0-3db5628b550f5c9c9f6f663cd158374035a6eaa0  
@@ -62,12 +62,12 @@ Dentro de la carpeta "recovered" se encuentra 3 carpetas que representa el hash 
 Al revisar cambios en el commit "" encontramos un usuario y contraseña para el inico de sesión:
 Usuario: admin
 Contraseña: st@mpch0rdt.ightiRu$glo0mappL3
-![[pass.png]]
+![pass](img/pass.png)
 
 Como no podemos iniciar sesión por SSH vamos a intentar conectarnos por una reverse shell con extención php, podemos revisar código de reverse shell php en el siguiente link: https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
 Cambiar la ip y port para poder estar en escucha con netcat, configuración del código:
-![[ip_shell.png]]
+![ip_shell](img/ip_shell.png)
 
 Ponernos a la escucha con netcat:
 ```
