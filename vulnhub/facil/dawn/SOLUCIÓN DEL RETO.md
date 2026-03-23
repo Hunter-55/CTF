@@ -31,13 +31,13 @@ Existe acceso de invitado guest (invitado)  y firmas de SMB desactivada:
 - message_signing: disabled (dangerous)
 
 Revisando la web encontramos que esta en construcción la web, pero no encontramos mucha información:
-- ![[web.png]]
+![web](img/web.png)
 
 Al realizar una enumeración de directorios de la web encontramos un directorio "logs" y dentro de ese directorio encontramos un archivo "management.log", en cual nos da indicio de que es la salida de un monitoreo del sistema con algun script o herramienta que detecta cambios en los paths: /usr /tmp /etc /home /var /opt
 ```
 dirb http://192.168.1.165/
 ```
-- ![[web_1.png]]
+![web_1](img/web_1.png)
 Encontramos que 2 archivos que espera la ejecución root donde vemos que le cambia los permisos por lo que podemos aprovechar para poder abrir una shell.
 
 Creamos el archivo  "web-control"
@@ -58,7 +58,7 @@ smbclient -L //192.168.1.165/
 
 Vemos que un sharename tiene un mensaje peculiar:
 - ITDEPT          Disk      PLEASE DO NOT REMOVE THIS SHARE. IN CASE YOU ARE NOT AUTHORIZED TO USE THIS SYSTEM LEAVE IMMEADIATELY.
-- ![[smb.png]]
+![smb](img/smb.png)
 
 Entramos al sharename "ITDEPT":
 ```
@@ -74,7 +74,7 @@ En otra terminal ponemos en escucha a netcat:
 ```
 nc -lvp 4444
 ```
-- ![[nc.png]]
+![nc](img/nc.png)
 
 Nos ponemos comodos:
 ```
